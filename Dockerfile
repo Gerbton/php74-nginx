@@ -1,4 +1,4 @@
-#Version: 1.1.0
+#Version: 1.1.1
 FROM ubuntu:20.04
 LABEL maintainer="gerbton@gmail.com"
 ENV TZ=America/Sao_Paulo
@@ -8,8 +8,11 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     add-apt-repository ppa:ondrej/php && \
     apt-get update --fix-missing && \
 
-    # Intall VIM and NGINX
+    # Install VIM and NGINX
     apt-get install -y vim nginx \
+
+    # Install Composer
+    composer \
 
     # Install PHP7.4
     php7.4 php7.4-cli php7.4-fpm php7.4-dev php7.4-json php7.4-pdo php7.4-mysql php7.4-zip php7.4-gd php7.4-mbstring \
