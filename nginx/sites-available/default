@@ -21,6 +21,6 @@ server{
     include snippets/php.conf;
     include snippets/restrictions.conf;
     include snippets/wordpress.conf;
-    include snippets/expires.conf;
+    #include snippets/expires.conf;
 }
 
