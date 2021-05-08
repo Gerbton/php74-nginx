@@ -1,4 +1,4 @@
-#Version: 1.1.1
+#Version: 1.2.0
 FROM ubuntu:20.04
 LABEL maintainer="gerbton@gmail.com"
 ENV TZ=America/Sao_Paulo
@@ -10,6 +10,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
 
     # Install VIM and NGINX
     apt-get install -y vim nginx \
+
+    # Install Node
+    nodejs npm \
 
     # Install Composer
     composer \
