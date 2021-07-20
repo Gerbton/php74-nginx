@@ -1,4 +1,4 @@
-#Version: 1.2.0
+#Version: 1.2.1
 FROM ubuntu:20.04
 LABEL maintainer="gerbton@gmail.com"
 ENV TZ=America/Sao_Paulo
@@ -9,7 +9,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     apt-get update --fix-missing && \
 
     # Install VIM and NGINX
-    apt-get install -y vim nginx \
+    apt-get install -y --no-install-recommends vim nginx \
 
     # Install Node
     nodejs npm \
