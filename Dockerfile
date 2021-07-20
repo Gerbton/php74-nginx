@@ -1,4 +1,4 @@
-#Version: 1.2.0
+#Version: 1.2.1
 FROM ubuntu:20.04
 LABEL maintainer="gerbton@gmail.com"
 ENV TZ=America/Sao_Paulo
