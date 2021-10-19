@@ -1,4 +1,4 @@
-#Version: 1.3.1
+#Version: 1.3.4
 FROM ubuntu:20.04
 
 ENV TZ=America/Sao_Paulo
@@ -10,6 +10,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     apt-get update --fix-missing && \
     \
     apt-get install -y --no-install-recommends  \
+    build-essential \
+    python \
     vim  \
     nginx  \
     curl  \
@@ -18,7 +20,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     php7.4 php7.4-cli php7.4-fpm php7.4-dev php7.4-json php7.4-pdo php7.4-mysql php7.4-zip php7.4-gd php7.4-mbstring \
     php7.4-curl php7.4-xml php7.4-bcmath php7.4-xdebug && \
     \
-    curl -fsSL https://deb.nodesource.com/setup_16.x | bash -  && \
+    curl -fsSL https://deb.nodesource.com/setup_14.x | bash -  && \
     apt-get install -y nodejs && \
     npm install --global yarn && \
     \
