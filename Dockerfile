@@ -1,4 +1,4 @@
-#Version: 1.2.1
+#Version: 1.3.1
 FROM ubuntu:20.04
 
 ENV TZ=America/Sao_Paulo
